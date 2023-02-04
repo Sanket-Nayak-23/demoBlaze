@@ -17,6 +17,9 @@ public class HomePage extends TestBase {
 	@FindBy(xpath="//a[@id='nameofuser']")
 	private WebElement login_status;
 	
+	@FindBy(xpath="//a[@href='prod.html?idp_=1']")
+	private WebElement samsung_galaxyS6_link;
+	
 //	-------action methods------
 	
 	public void clickOnLoginLink() {
@@ -28,6 +31,9 @@ public class HomePage extends TestBase {
 		String msg=login_status.getText();
 		return msg;
 	}
-	
+
+	public void clickOnSamsungGalaxyS6Link() {
+		samsung_galaxyS6_link.click();
+	}
 
 }

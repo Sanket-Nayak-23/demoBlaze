@@ -9,8 +9,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.www.demoBlaze.demoBlaze.CartPage;
 import com.www.demoBlaze.demoBlaze.HomePage;
 import com.www.demoBlaze.demoBlaze.LoginPage;
+import com.www.demoBlaze.demoBlaze.PlaceOrderPage;
+import com.www.demoBlaze.demoBlaze.ProductPage;
 import com.www.utilities.Util;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -22,6 +25,10 @@ public class TestBase {
 	public HomePage homePage_obj;
 	public LoginPage loginPage_obj;
 	public  Util util_obj;
+	public PlaceOrderPage placeOrder_obj;
+	public ProductPage product_page_obj;
+	public CartPage cart_page_obj;
+	
 	
 	@BeforeMethod
 	public void setUp() {
@@ -53,6 +60,9 @@ public class TestBase {
 	homePage_obj=new HomePage();
 	loginPage_obj=new LoginPage();
 	util_obj=new Util();
+	placeOrder_obj=new PlaceOrderPage();
+	product_page_obj=new ProductPage();
+	cart_page_obj=new CartPage();
 	
 	}
 	@AfterMethod

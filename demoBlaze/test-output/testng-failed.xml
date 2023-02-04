@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.www.demoBlaze.testLayer.LoginTest">
+      <class name="com.www.demoBlaze.testLayer.BuyFunctionalityWithoutLoginTest">
         <methods>
-          <include name="verifyLogin" invocation-numbers="0"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="buyFunctionalityWithoutLoginTes" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.www.demoBlaze.testLayer.LoginTest -->
+      </class> <!-- com.www.demoBlaze.testLayer.BuyFunctionalityWithoutLoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

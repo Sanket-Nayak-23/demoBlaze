@@ -10,5 +10,10 @@ public class DataProvideClass extends TestBase {
 		Object[][] data= {{"testacc3","test"}};
 		return data;
 	}
+	@DataProvider(name="placeOrderDatails")
+	public Object[][] details() {
+			Object[][] orderDetails= {{"messi","argentina","Buenos aires","12345667","feb","2024"}};
+			return orderDetails;
+	}
 
 }
