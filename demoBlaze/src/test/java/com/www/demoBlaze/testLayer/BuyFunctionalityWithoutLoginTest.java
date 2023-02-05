@@ -1,12 +1,13 @@
 package com.www.demoBlaze.testLayer;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.www.demoBlaze.demoBlaze.PlaceOrderPage;
 
 import testBase.TestBase;
-
+@Listeners
 public class BuyFunctionalityWithoutLoginTest extends TestBase	 {
 	
 	@Test(dataProvider="placeOrderDatails", dataProviderClass=DataProvideClass.class)

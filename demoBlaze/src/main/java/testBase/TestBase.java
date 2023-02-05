@@ -8,6 +8,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 
 import com.www.demoBlaze.demoBlaze.CartPage;
 import com.www.demoBlaze.demoBlaze.HomePage;
@@ -17,7 +19,6 @@ import com.www.demoBlaze.demoBlaze.ProductPage;
 import com.www.utilities.Util;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 
 public class TestBase {
 	public static WebDriver driver;
@@ -29,10 +30,10 @@ public class TestBase {
 	public ProductPage product_page_obj;
 	public CartPage cart_page_obj;
 	
-	
+	@Parameters("browser")
 	@BeforeMethod
-	public void setUp() {
-		String br="chrome";
+	public void setUp(String br) {
+//		String br="chrome";
 		if(br.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();

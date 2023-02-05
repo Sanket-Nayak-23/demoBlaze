@@ -4,11 +4,12 @@ package com.www.demoBlaze.testLayer;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-
 import testBase.TestBase;
 
+
 public class LoginTest extends TestBase{
+	
+	
 	@Test (dataProvider="loginData", dataProviderClass=DataProvideClass.class)
 	public void verifyLogin(String username, String password) throws InterruptedException {
 		homePage_obj.clickOnLoginLink();
@@ -21,7 +22,9 @@ public class LoginTest extends TestBase{
 //		util_obj.handleAlert();
 		Thread.sleep(10000);
 		String status =homePage_obj.loginStatus();
-		Assert.assertEquals(status, "Welcome testacc3");
+		Assert.fail();
+//		Assert.assertEquals(status, "Welcome testacc3");
+		
 	}
 
 }
