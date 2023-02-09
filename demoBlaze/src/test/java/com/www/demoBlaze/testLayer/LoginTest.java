@@ -19,11 +19,10 @@ public class LoginTest extends TestBase{
 		Thread.sleep(2000);
 		loginPage_obj.clickOnLoginButton();
 		Thread.sleep(2000);
-//		util_obj.handleAlert();
 		Thread.sleep(10000);
 		String status =homePage_obj.loginStatus();
-		Assert.fail();
-//		Assert.assertEquals(status, "Welcome testacc3");
+//		Assert.fail();
+		Assert.assertEquals(status, "Welcome testacc3");
 		
 	}
 
